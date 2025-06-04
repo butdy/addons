@@ -1,0 +1,68 @@
+<odoo>
+    <data>
+    <!--Attende Tree -->
+        <record id="view_academic_attendee_tree" model="ir.ui.view">
+            <field name="name">academic.attendee.tree</field>
+            <field name="model">academic.attendee</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Attende">
+                    <field name="name" />
+                    <field name="session_id" />
+                    <field name="partner_id" />
+                    <field name="course_id" />
+                </tree>
+            </field>
+        </record>
+    <!-- form -->
+    <!--Search View -->
+        <record id="view_academic_attendee_search" model="ir.ui.view">
+            <field name="name">academic.attendee.search</field>
+            <field name="model">academic.attendee</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name" />
+                    <field name="session_id" />
+                    <field name="partner_id" />
+                    <group string="Group by">
+                        <filter
+                            name="group_by_session"
+                            string="Session"
+                            context="{'group_by':'session_id'}"
+                        />
+                        <filter
+                            name="group_by_course"
+                            string="Course"
+                            context="{'group_by':'course_id'}"
+                        />
+                        <filter
+                            name="group_by_partner"
+                            string="Partner"
+                            context="{'group_by':'partner_id'}"
+                        />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+    <!-- Session Form 
+        <record id="view_academic_attende_form" model="ir.ui.view">
+            <field name="name">academic.attendee.form</field>
+            <field name="model">academic.attendee</field>
+            <field name="type">form</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form string="Attendee">
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only" string="Attendee name" />
+                        <h1>
+                            <field name="name" />
+                        </h1>
+                    </div>
+                </form>
+            </field>
+        </record>
+   form -->
+       
+    </data>
+</odoo>
