@@ -16,6 +16,7 @@
         "attendee.xml",
         "partner.xml",
         "wizard/create_attendee.xml",
+        "reports/session.xml",
     ],
     "installable" : True,
     "auto_install" : False,
