@@ -92,6 +92,7 @@
             </calendar>
         </field>
     </record>
+    
     <!-- form -->
 
     <!-- Search View -->
@@ -122,6 +123,7 @@
             </search>
         </field>
     </record>
+
     <!-- Graph -->
     <record id="view_academic_session_graph" model="ir.ui.view">
         <field name="name">view_academic_session_graph</field>

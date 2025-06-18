@@ -4,7 +4,7 @@ import time
 
 class Session(models.Model):
     _name = "academic.session"
-    _description = 'Session'
+    _description = "Session"
     name = fields.Char(string="Name", required=True)
     
     course_id = fields.Many2one(
@@ -14,7 +14,7 @@ class Session(models.Model):
     
     instructor_id = fields.Many2one(
         comodel_name="res.partner",
-        string="instructur", required=True
+        string="instructor", required=True
     )
     
     start_date = fields.Date(string="Start Date", default=lambda self:time.strftime("%Y-%m-%d"))
